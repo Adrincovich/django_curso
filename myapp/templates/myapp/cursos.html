@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <html>
+        <title>Lista de cursos</title>
+        <table style="border: 1px solid">
+        <thead>
+        <tr>
+        <th>Curso</th>
+        <th>Inscriptos</th>
+        <th>Turno</th>
+        <th>Profesor</th>
+        </tr>
+        </thead>
+        {% for curso in cursos %}
+        <tr>
+        <td>{{ curso.nombre }}</td>
+        <td>{{ curso.inscriptos }}</td>
+        <td>{{ curso.get_turno_display }}</td> <!-- ESTO SIRVE PARA MOSTRAR EL NOMBRE EN VEZ DEL ID -->
+        <td>{{ curso.profesor }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+       </html>
+</body>
+</html>
